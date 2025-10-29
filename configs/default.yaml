@@ -1,0 +1,60 @@
+# SAC Configuration
+sac:
+  learning_rate: 3e-4
+  gamma: 0.99
+  tau: 0.005
+  alpha: 0.2
+  batch_size: 256
+  buffer_size: 1000000
+  hidden_dim: 256
+
+# PPO Configuration  
+ppo:
+  learning_rate: 3e-4
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_ratio: 0.2
+  value_coef: 0.5
+  entropy_coef: 0.01
+  max_grad_norm: 0.5
+  n_epochs: 4
+  batch_size: 64
+  hidden_dim: 64
+
+# TD3 Configuration
+td3:
+  learning_rate: 3e-4
+  gamma: 0.99
+  tau: 0.005
+  policy_noise: 0.2
+  noise_clip: 0.5
+  policy_delay: 2
+  batch_size: 256
+  buffer_size: 1000000
+  hidden_dim: 256
+
+# Environment configurations
+environments:
+  pendulum:
+    name: "Pendulum-v1"
+    max_steps: 200
+    
+  cartpole:
+    name: "CartPole-v1"
+    max_steps: 500
+    
+  mountain_car:
+    name: "MountainCar-v0"
+    max_steps: 200
+    
+  lunar_lander:
+    name: "LunarLander-v2"
+    max_steps: 1000
+
+# Training configurations
+training:
+  episodes: 200
+  log_interval: 10
+  save_interval: 50
+  render: false
+  plot: true

@@ -1,0 +1,30 @@
+# Core dependencies
+gymnasium>=0.29.0
+torch>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Reinforcement Learning libraries
+stable-baselines3>=2.0.0
+ray[rllib]>=2.7.0
+
+# Visualization and UI
+streamlit>=1.28.0
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Configuration and logging
+pyyaml>=6.0
+tensorboard>=2.13.0
+wandb>=0.15.0
+
+# Development and testing
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Optional: Additional environments
+gymnasium[atari]>=0.29.0
+gymnasium[mujoco]>=0.29.0
